@@ -15,4 +15,4 @@ class Question(models.Model):
     content = models.CharField(max_length=300)
     first_name = models.CharField(max_length=64)
     answer = models.CharField(max_length=1000, null=True, blank=True)
-    technology = models.IntegerField(choices=TECHNOLOGY, deafault=-1)
+    technology = models.IntegerField(choices=TECHNOLOGY, default=-1)
