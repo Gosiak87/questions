@@ -1,0 +1,18 @@
+{% extends "main.html" %}
+
+{% block content %}
+    <h3 style="color: #17a2b8;"> Dodawanie pytania</h3>
+    <hr>
+    <form method="post" class="post-form">
+    {% csrf_token %}
+        {{ form.as_p }}
+        {% csrf_token %}
+    </form>
+
+    <nav class="navbar navbar-light bg-light">
+        <form class="form-inline">
+            <button type="submit" class="btn btn-info">Dodaj wszystko</button>
+            <a href="/all_questions" class="btn btn-info">Wróć do wszystkich pytan </a>
+        </form>
+    </nav>
+{% endblock %}

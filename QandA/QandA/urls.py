@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls import url
-from QandA_app.views import (MainView)
+from QandA_app.views import (MainView, AddQuestionView, AllQuestionsView)
 
 urlpatterns = [
     url(r'admin/', admin.site.urls),
     url(r'^main$', MainView.as_view(), name="main"),
+    url(r'add_question', AddQuestionView.as_view(), name="add-question"),
+    url(r'all_questions', AddQuestionView.as_view(), name="all-questions")
 
 ]

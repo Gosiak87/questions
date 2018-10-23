@@ -1,0 +1,21 @@
+{% extends "main.html" %}
+{% block content %}
+    <h3 style="color: #17a2b8;"> Wszystkie pytania</h3>
+    <hr>
+    <ul>
+        {% for question in questions %}
+            <li>
+                <a class="nav-link" href="show_question/{{ question.id }}"> {{ question.name }} </a>
+            </li>
+        {% endfor %}
+        <hr>
+        <br>
+        <nav class="navbar navbar-light bg-light">
+            <form class="form-inline">
+                <a href="/add_questions" class="btn btn-info" role="button">Dodaj pytanie </a>
+                <a href="/main" class="btn btn-info" role="button">Wróć do strony głównej </a>
+            </form>
+        </nav>
+        <br>
+    </ul>
+{% endblock %}
