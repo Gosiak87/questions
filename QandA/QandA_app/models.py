@@ -13,6 +13,5 @@ class Question(models.Model):
         (5, "CSS")
     )
     content = models.CharField(max_length=300)
-    first_name = models.CharField(max_length=64)
     answer = models.CharField(max_length=1000, null=True, blank=True)
     technology = models.IntegerField(choices=TECHNOLOGY, default=-1)
